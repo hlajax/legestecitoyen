@@ -1,0 +1,28 @@
+<%= form_with(model: corruption_cat, local: true) do |form| %>
+  <% if corruption_cat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(corruption_cat.errors.count, "error") %> prohibited this corruption_cat from being saved:</h2>
+
+      <ul>
+        <% corruption_cat.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titre %>
+    <%= form.text_field :titre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

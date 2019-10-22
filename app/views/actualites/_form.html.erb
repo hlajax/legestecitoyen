@@ -1,0 +1,38 @@
+<%= form_with(model: actualite, local: true) do |form| %>
+  <% if actualite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(actualite.errors.count, "error") %> prohibited this actualite from being saved:</h2>
+
+      <ul>
+        <% actualite.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titre %>
+    <%= form.text_field :titre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contenu %>
+    <%= form.text_area :contenu %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.collection_select :category_id, Category.all, :id, :titre, {prompt:"Sélectionnez une catégorie"} %>
+  </div>
+  
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

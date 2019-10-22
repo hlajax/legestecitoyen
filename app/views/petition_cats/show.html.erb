@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @petition_cat.titre %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @petition_cat.description %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @petition_cat.slug %>
+</p>
+
+<%= link_to 'Edit', edit_petition_cat_path(@petition_cat) %> |
+<%= link_to 'Back', petition_cats_path %>

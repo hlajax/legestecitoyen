@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Corruption Cats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titre</th>
+      <th>Description</th>
+      <th>Slug</th>
+      <th>Administrateur</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @corruption_cats.each do |corruption_cat| %>
+      <tr>
+        <td><%= corruption_cat.titre %></td>
+        <td><%= corruption_cat.description %></td>
+        <td><%= corruption_cat.slug %></td>
+        <td><%= corruption_cat.administrateur_id %></td>
+        <td><%= link_to 'Show', corruption_cat %></td>
+        <td><%= link_to 'Edit', edit_corruption_cat_path(corruption_cat) %></td>
+        <td><%= link_to 'Destroy', corruption_cat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Corruption Cat', new_corruption_cat_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @sondage.titre %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sondage.description %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @sondage.slug %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @sondage.image %>
+</p>
+
+<p>
+  <strong>Administrateur:</strong>
+  <%= @sondage.administrateur_id %>
+</p>
+
+<%= link_to 'Edit', edit_sondage_path(@sondage) %> |
+<%= link_to 'Back', sondages_path %>

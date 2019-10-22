@@ -1,0 +1,974 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body{
+    background-color:white;
+}
+a{
+	color: white;
+}
+.logo{
+	width: 50%;
+}
+/*----les bgs----------*/
+.bg-trans{
+	background-color: transparent;
+}
+.navbar-main .nav-link{
+	color:  black;
+}
+/*---les bgs-----------*/
+/*----les btns----------*/
+.btn-like{
+    background-color:transparent;
+    color:black;
+    font-weight:bold;
+    /*transition: all .5s ease;*/
+}
+.btn-like:hover{
+    color:white;
+    background-color:green;
+    font-weight:bold,
+}
+.navbar-main .nav-link{
+	color:  black;
+}
+.bg-geste{
+     background-color: #003044;
+}
+.btn-geste{
+     background-color: #003044;
+	 color:white;
+}
+/*---les btns-----------*/
+/*------les marges----*/
+.m-top-xs{
+	margin-top: 1%;
+}
+.m-top-main{
+	margin-top: 3.4%;
+}
+.m-top-mini{
+	margin-top: 2.5%;
+}
+.m-top{
+	margin-top: 5%;
+}
+.m-top-big{
+	margin-top: 20%;
+}
+.m-bottom-xs{
+	margin-bottom: 1%;
+}
+.m-bottom-big{
+	margin-bottom: 5%;
+}
+/*----les marges fin----*/
+/*-----les paddings-----*/
+.zepad{
+	padding:5%;
+}
+.zepad-main{
+	padding:3%;
+}
+.zepad-nav{
+	padding:.5%;
+}
+.zepad-titre{
+	padding-top:5%;
+}
+/*-----les paddings fin--*/
+/*----les textes-------*/
+.text-maj{
+	text-transform: uppercase;
+}
+.text-bold{
+	font-weight: bold;
+}
+	.big-titre{
+		font-size: 36px;
+		font-family: 'Frank Ruhl Libre', serif;
+	}
+.text-cap{
+	text-transform: capitalize;
+}
+.big-titre{
+	font-size: 40px;
+	font-family: 'Merriweather', serif;
+}
+.big-titre::first-letter{
+text-transform: uppercase;
+}
+.contenu p{
+	font-size: 18px;
+	font-family: 'Merriweather', serif;
+	line-height: 1.5;
+}
+.contenu p:first-of-type::first-letter {
+  color: #003044;
+	font-weight: bold;
+  font-size: 50px;
+}
+.nav-link{
+    color: black;
+    font-size: 16px;
+    text-transform:uppercase;
+}
+.nav-link:hover{
+    color: black;
+    font-size: 16px;
+    text-transform:uppercase;
+}
+.titre-section{
+	background-color:white;
+	padding:1.5%;
+	font-size:24px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+/*---les textes---*/
+/*---flickity----*/
+.carousel-cell {
+  width: 100%;
+  height: 400px;
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-cell-2 {
+  width: 50%;
+  height: 400px;
+  margin-right: 10px;
+}
+
+/* cell number */
+.carousel-cell-2:before {
+  display: block;
+  text-align: center;
+  line-height: 400px;
+  font-size: 80px;
+  color: white;
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+}
+/*---flickity----*/
+/*---snippets pour actualites----*/
+.snipactus {
+  font-family: 'Merriweather', serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /*margin: 10px;*/
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: left;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.snipactus * {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snipactus img {
+  width: 100%;
+  vertical-align: top;
+  height: 400px;
+}
+.snipactus figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.snipactus h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 3px 0;
+}
+.snipactus .title1 {
+  font-weight: 700;
+	font-size: 32px;
+	line-height: 1;
+}
+.snipactus .title2 {
+  color: #a58e7c;
+  font-weight: 300;
+}
+.snipactus .title3 {
+  font-weight: 700;
+  font-size: 12px;
+	margin-bottom: 1%;
+}
+.snipactus a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/*----snippets  pour actualites end----------------------------*/
+/*---snippets for sondage et petitions----*/
+.snip1581 {
+  font-family: 'Merriweather', serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /*margin: 10px;*/
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: left;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.snip1581 * {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snip1581 img {
+  width: 100%;
+  vertical-align: top;
+  height: 250px;
+}
+.snip1581 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+	background-position: center;
+	background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.snip1581 h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 3px 0;
+}
+.snip1581 .title1 {
+  font-weight: 700;
+	font-size: 20px;
+	line-height: normal;
+}
+.snip1581 .title2 {
+  color: #a58e7c;
+  font-weight: 300;
+}
+.snip1581 .title3 {
+  font-weight: 700;
+  font-size: 12px;
+	margin-bottom: 2%;
+}
+.snip1581 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/*----snippets end----------------------------*/
+/*---snippets for sondage ----*/
+.snipsond {
+  font-family: 'Merriweather', serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /*margin: 10px;*/
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: left;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.snipsond * {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snipsond img {
+  width: 100%;
+  vertical-align: top;
+  height: 400px;
+}
+.snipsond figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+	background-position: center;
+	background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.snipsond h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 3px 0;
+}
+.snipsond .title1 {
+  font-weight: 700;
+	font-size: 20px;
+	line-height: normal;
+}
+.snipsond .title2 {
+  color: #a58e7c;
+  font-weight: 300;
+}
+.snipsond .title3 {
+  font-weight: 700;
+  font-size: 12px;
+	margin-bottom: 2%;
+}
+.snipsond a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/*----snippets sondages end----------------------------*/
+/*----------snippets for petitions sections--------*/
+figure.snip1253 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  max-height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: left;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+figure.snip1253 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+figure.snip1253 .image {
+  max-height: 220px;
+  overflow: hidden;
+}
+figure.snip1253 img {
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+figure.snip1253 figcaption {
+  margin: -40px 15px 0;
+  padding: 15px ;
+  position: relative;
+  background-color: #ffffff;
+}
+/*figure.snip1253 .date {
+  background-color: #2980b9;
+  top: 15px;
+  color: #fff;
+  left: 15px;
+  min-height: 48px;
+  min-width: 48px;
+  position: absolute;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+figure.snip1253 .date span {
+  display: block;
+  line-height: 24px;
+}
+figure.snip1253 .date .month {
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.1);
+}*/
+figure.snip1253 h3,
+figure.snip1253 p {
+  margin: 0;
+  padding: 0;
+}
+figure.snip1253 h3 {
+  min-height: 50px;
+  margin-bottom: 10px;
+  /*margin-left: 60px;*/
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+	font-size: 20px;
+}
+figure.snip1253 p {
+  font-size: 0.8em;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+figure.snip1253 footer {
+  padding: 0 25px;
+  background-color: #20638f;
+  color: #e6e6e6;
+  font-size: 0.8em;
+  line-height: 30px;
+  text-align: right;
+}
+figure.snip1253 footer > div {
+  display: inline-block;
+  margin-left: 10px;
+}
+figure.snip1253 footer i {
+  color: rgba(255, 255, 255, 0.2);
+  margin-right: 5px;
+}
+figure.snip1253 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+figure.snip1253:hover img,
+figure.snip1253.hover img {
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+/*---------snippets for petitions sections end----*/
+/*-------------------------------------------------------------end PC version-------------------------------------------------------*/
+@media all and (max-width: 414px) and (min-width: 320px) {
+  .logo{
+	width: 100%;
+}
+/*----les bgs----------*/
+.bg-trans{
+	background-color: transparent;
+}
+.navbar-main .nav-link{
+	color:  black;
+}
+/*---les bgs-----------*/
+/*----les btns----------*/
+.btn-like{
+    background-color:transparent;
+    color:black;
+    font-weight:bold;
+    /*transition: all .5s ease;*/
+}
+.btn-like:hover{
+    color:white;
+    background-color:green;
+    font-weight:bold,
+}
+.navbar-main .nav-link{
+	color:  black;
+}
+.bg-geste{
+     background-color: #003044;
+}
+.btn-geste{
+     background-color: #003044;
+	 color:white;
+}
+/*---les btns-----------*/
+/*------les marges----*/
+.m-top-xs{
+	margin-top: 1%;
+}
+.m-top-main{
+	margin-top: 3.4%;
+}
+.m-top-mini{
+	margin-top: 2.5%;
+}
+.m-top{
+	margin-top: 5%;
+}
+.m-top-big{
+	margin-top: 20%;
+}
+.m-bottom-xs{
+	margin-bottom: 1%;
+}
+.m-bottom-big{
+	margin-bottom: 5%;
+}
+/*----les marges fin----*/
+/*-----les paddings-----*/
+.zepad{
+	padding:5%;
+}
+.zepad-main{
+	padding:3%;
+}
+.zepad-nav{
+	padding:.5%;
+}
+.zepad-titre{
+	padding-top:5%;
+}
+/*-----les paddings fin--*/
+/*----les textes-------*/
+.text-maj{
+	text-transform: uppercase;
+}
+.text-bold{
+	font-weight: bold;
+}
+	.big-titre{
+		font-size: 36px;
+		font-family: 'Frank Ruhl Libre', serif;
+	}
+.text-cap{
+	text-transform: capitalize;
+}
+.big-titre{
+	font-size: 40px;
+	font-family: 'Merriweather', serif;
+}
+.big-titre::first-letter{
+text-transform: uppercase;
+}
+.contenu p{
+	font-size: 18px;
+	font-family: 'Merriweather', serif;
+	line-height: 1.5;
+}
+.contenu p:first-of-type::first-letter {
+  color: #003044;
+	font-weight: bold;
+  font-size: 50px;
+}
+.nav-link{
+    color: black;
+    font-size: 12px;
+    text-transform:uppercase;
+}
+.nav-link:hover{
+    color: black;
+    font-size: 12px;
+    text-transform:uppercase;
+}
+.titre-section{
+	background-color:white;
+	padding:1.5%;
+	font-size:16px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+/*---les textes---*/
+/*---flickity----*/
+.carousel-cell {
+  width: 100%;
+  height: 200px;
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	margin-bottom: 5%;
+}
+
+.carousel-cell-2 {
+  width: 50%;
+  height: 200px;
+  margin-right: 10px;
+}
+
+/* cell number */
+.carousel-cell-2:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+}
+/*---flickity----*/
+/*---snippets pour actualites----*/
+.snipactus {
+  font-family: 'Merriweather', serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /*margin: 10px;*/
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: left;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.snipactus * {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snipactus img {
+  width: 100%;
+  vertical-align: top;
+  height: 200px;
+}
+.snipactus figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.snipactus h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 3px 0;
+}
+.snipactus .title1 {
+  font-weight: 700;
+	font-size: 14px;
+	line-height: 1.5;
+}
+.snipactus .title2 {
+  color: #a58e7c;
+  font-weight: 300;
+}
+.snipactus .title3 {
+  font-weight: 700;
+  font-size: 10px;
+	margin-bottom: 1%;
+}
+.snipactus a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/*----snippets  pour actualites end----------------------------*/
+/*---snippets for sondage et petitions----*/
+.snip1581 {
+  font-family: 'Merriweather', serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /*margin: 10px;*/
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: left;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.snip1581 * {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snip1581 img {
+  width: 100%;
+  vertical-align: top;
+  height: 250px;
+}
+.snip1581 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+	background-position: center;
+	background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.snip1581 h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 3px 0;
+}
+.snip1581 .title1 {
+  font-weight: 700;
+	font-size: 14px;
+	line-height: normal;
+}
+.snip1581 .title2 {
+  color: #a58e7c;
+  font-weight: 300;
+}
+.snip1581 .title3 {
+  font-weight: 700;
+  font-size: 10px;
+	margin-bottom: 2%;
+}
+.snip1581 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/*----snippets end----------------------------*/
+/*---snippets for sondage ----*/
+.snipsond {
+  font-family: 'Merriweather', serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /*margin: 10px;*/
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: left;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.snipsond * {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snipsond img {
+  width: 100%;
+  vertical-align: top;
+  height: 200px;
+}
+.snipsond figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+	background-position: center;
+	background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.snipsond h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 3px 0;
+}
+.snipsond .title1 {
+  font-weight: 700;
+	font-size: 14px;
+	line-height: normal;
+}
+.snipsond .title2 {
+  color: #a58e7c;
+  font-weight: 300;
+}
+.snipsond .title3 {
+  font-weight: 700;
+  font-size: 10px;
+	margin-bottom: 2%;
+}
+.snipsond a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/*----snippets sondages end----------------------------*/
+/*----------snippets for petitions sections--------*/
+figure.snip1253 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  max-height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: left;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+figure.snip1253 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+figure.snip1253 .image {
+  max-height: 220px;
+  overflow: hidden;
+}
+figure.snip1253 img {
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+figure.snip1253 figcaption {
+  margin: -40px 15px 0;
+  padding: 15px ;
+  position: relative;
+  background-color: #ffffff;
+}
+/*figure.snip1253 .date {
+  background-color: #2980b9;
+  top: 15px;
+  color: #fff;
+  left: 15px;
+  min-height: 48px;
+  min-width: 48px;
+  position: absolute;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+figure.snip1253 .date span {
+  display: block;
+  line-height: 24px;
+}
+figure.snip1253 .date .month {
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.1);
+}*/
+figure.snip1253 h3,
+figure.snip1253 p {
+  margin: 0;
+  padding: 0;
+}
+figure.snip1253 h3 {
+  min-height: 50px;
+  margin-bottom: 10px;
+  /*margin-left: 60px;*/
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+	font-size: 14px;
+}
+figure.snip1253 p {
+  font-size: 0.8em;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+figure.snip1253 footer {
+  padding: 0 25px;
+  background-color: #20638f;
+  color: #e6e6e6;
+  font-size: 0.8em;
+  line-height: 30px;
+  text-align: right;
+}
+figure.snip1253 footer > div {
+  display: inline-block;
+  margin-left: 10px;
+}
+figure.snip1253 footer i {
+  color: rgba(255, 255, 255, 0.2);
+  margin-right: 5px;
+}
+figure.snip1253 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+figure.snip1253:hover img,
+figure.snip1253.hover img {
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+/*---------snippets for petitions sections end----*/  
+}
+/*media queries fin*/

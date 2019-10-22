@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Corruptions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titre</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Ville</th>
+      <th>Date</th>
+      <th>Slug</th>
+      <th>Corruption cat</th>
+      <th>Citoyen</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @corruptions.each do |corruption| %>
+      <tr>
+        <td><%= corruption.titre %></td>
+        <td><%= corruption.description %></td>
+        <td><%= corruption.image %></td>
+        <td><%= corruption.ville %></td>
+        <td><%= corruption.date %></td>
+        <td><%= corruption.slug %></td>
+        <td><%= corruption.corruption_cat_id %></td>
+        <td><%= corruption.citoyen_id %></td>
+        <td><%= link_to 'Show', corruption %></td>
+        <td><%= link_to 'Edit', edit_corruption_path(corruption) %></td>
+        <td><%= link_to 'Destroy', corruption, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Corruption', new_corruption_path %>

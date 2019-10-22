@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titre: MyString
+  description: MyText
+  image: MyString
+  ville: MyString
+  date: MyString
+  slug: MyString
+  corruption_cat: one
+  citoyen: one
+
+two:
+  titre: MyString
+  description: MyText
+  image: MyString
+  ville: MyString
+  date: MyString
+  slug: MyString
+  corruption_cat: two
+  citoyen: two

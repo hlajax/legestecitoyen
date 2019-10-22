@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @corruption.titre %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @corruption.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @corruption.image %>
+</p>
+
+<p>
+  <strong>Ville:</strong>
+  <%= @corruption.ville %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @corruption.date %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @corruption.slug %>
+</p>
+
+<p>
+  <strong>Corruption cat:</strong>
+  <%= @corruption.corruption_cat_id %>
+</p>
+
+<p>
+  <strong>Citoyen:</strong>
+  <%= @corruption.citoyen_id %>
+</p>
+
+<%= link_to 'Edit', edit_corruption_path(@corruption) %> |
+<%= link_to 'Back', corruptions_path %>

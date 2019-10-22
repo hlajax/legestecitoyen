@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @corruption_cat.titre %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @corruption_cat.description %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @corruption_cat.slug %>
+</p>
+
+<p>
+  <strong>Administrateur:</strong>
+  <%= @corruption_cat.administrateur_id %>
+</p>
+
+<%= link_to 'Edit', edit_corruption_cat_path(@corruption_cat) %> |
+<%= link_to 'Back', corruption_cats_path %>

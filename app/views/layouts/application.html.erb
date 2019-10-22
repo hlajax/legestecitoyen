@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% if content_for?(:head) %>
+    <%= yield(:head) %>
+  <% end %>
+    <%= display_meta_tags site: 'Le Geste Citoyen' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/aseed/image/upload/v1568370850/Le_Geste_Citoyen_Logo_Couleur_1_r2undr.png" />
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet"> 
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
+    
+      <script src="https://cdn.tiny.cloud/1/15tc7oc36rxnouo2cz210ck40fm0js489kdx95chux0rr8y8/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>tinymce.init({selector:'textarea'});</script>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   	<!--<p class="notice"><%= notice %></p>
+   	<p class="alert"><%= alert %></p>-->
+    <%= yield %>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
+    <script type="text/javascript">
+		$('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+wrapAround: true,
+freeScroll: true,
+pageDots: false, 
+});
+	</script>
+	<script>
+		var $carousel = $('.carousel').flickity({
+  fade: true,
+  autoPlay: true ,
+  imagesLoaded: true ,
+  pageDots: false, 
+});
+	</script>
+  </body>
+</html>
