@@ -1,10 +1,24 @@
 Rails.application.routes.draw do
-  resources :sondages
+  resources :sondages do
+	    member do
+    put "like", to: "sondages#upvote"
+    put "dislike", to: "sondages#downvote"
+  end
+  end
   resources :corruptions
   resources :corruption_cats
-  resources :petitions
+  resources :petitions do
+	    member do
+    put "like", to: "petitions#upvote"
+  end
+  end
   resources :petition_cats
-  resources :actualites
+  resources :actualites do
+	    member do
+    put "like", to: "actualites#upvote"
+    put "dislike", to: "actualites#downvote"
+  end
+  end
   resources :categories
   devise_for :administrateurs
   root 'accueil#index'

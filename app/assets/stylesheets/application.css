@@ -17,7 +17,7 @@ body{
     background-color:white;
 }
 a{
-	color: white;
+	color: black;
 }
 .logo{
 	width: 50%;
@@ -46,6 +46,9 @@ a{
 	color:  black;
 }
 .bg-geste{
+     background-color: #003044;
+}
+.dv-geste{
      background-color: #003044;
 }
 .btn-geste{
@@ -91,6 +94,10 @@ a{
 }
 /*-----les paddings fin--*/
 /*----les textes-------*/
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Merriweather', serif;
+	line-height: 1.5;
+}
 .text-maj{
 	text-transform: uppercase;
 }
@@ -125,16 +132,36 @@ text-transform: uppercase;
     color: black;
     font-size: 16px;
     text-transform:uppercase;
+	font-weight: bold;
 }
+
 .nav-link:hover{
     color: black;
     font-size: 16px;
     text-transform:uppercase;
+	font-weight: bold;
+}
+.nav-cat .nav-link{
+    color: white;
+    font-size: 16px;
+    text-transform:uppercase;
+	font-weight: bold;
+}
+.nav-cat .nav-link:hover{
+   color: white;
+    font-size: 16px;
+    text-transform:uppercase;
+	font-weight: bold;
 }
 .titre-section{
-	background-color:white;
-	padding:1.5%;
-	font-size:24px;
+	font-family: 'Merriweather', serif;
+	font-size:28px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+.titre-sport{
+	font-family: 'Merriweather', serif;
+	font-size:8px;
 	font-weight:bold;
 	text-transform:uppercase;
 }
@@ -150,7 +177,7 @@ text-transform: uppercase;
 }
 
 .carousel-cell-2 {
-  width: 50%;
+  width: 35%;
   height: 400px;
   margin-right: 10px;
 }
@@ -220,6 +247,11 @@ text-transform: uppercase;
   margin: 3px 0;
 }
 .snipactus .title1 {
+  font-weight: 700;
+	font-size: 32px;
+	line-height: 1;
+}
+.snipactus .title1 a {
   font-weight: 700;
 	font-size: 32px;
 	line-height: 1;
@@ -393,7 +425,7 @@ figure.snip1253 {
   color: #fff;
   position: relative;
   overflow: hidden;
-  margin: 10px;
+  /*margin: 10px;*/
   max-height: 100%;
   width: 100%;
   background-color: #ffffff;
@@ -524,6 +556,10 @@ figure.snip1253.hover img {
 .bg-geste{
      background-color: #003044;
 }
+.dv-geste{
+     background-color: #003044;
+	height: 10px;
+}
 .btn-geste{
      background-color: #003044;
 	 color:white;
@@ -601,15 +637,28 @@ text-transform: uppercase;
     color: black;
     font-size: 12px;
     text-transform:uppercase;
+	font-weight: bold;
 }
 .nav-link:hover{
     color: black;
     font-size: 12px;
     text-transform:uppercase;
+	font-weight: bold;
+}
+	.nav-cat .nav-link{
+    color: white;
+    font-size: 12px;
+    text-transform:uppercase;
+	font-weight: bold;
+}
+.nav-cat .nav-link:hover{
+   color: white;
+    font-size: 12px;
+    text-transform:uppercase;
+	font-weight: bold;
 }
 .titre-section{
-	background-color:white;
-	padding:1.5%;
+	font-family: 'Merriweather', serif;
 	font-size:16px;
 	font-weight:bold;
 	text-transform:uppercase;
@@ -870,7 +919,7 @@ figure.snip1253 {
   color: #fff;
   position: relative;
   overflow: hidden;
-  margin: 10px;
+  /*margin: 10px;*/
   max-height: 100%;
   width: 100%;
   background-color: #ffffff;

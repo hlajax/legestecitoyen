@@ -23,6 +23,7 @@ gem 'cloudinary'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 gem 'friendly_id', '~> 5.3'
 gem 'meta-tags', '~> 2.13'
+gem 'acts_as_votable', '~> 0.12.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

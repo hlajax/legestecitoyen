@@ -1,6 +1,6 @@
 class SondagesController < ApplicationController
   before_action :set_sondage, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_administrateur!
+  before_action :authenticate_administrateur!,except:[:index, :show, :upvote, :downvote]
   # GET /sondages
   # GET /sondages.json
   def index
@@ -12,6 +12,17 @@ class SondagesController < ApplicationController
   def show
   end
 
+def upvote
+  @sondage = Sondage.friendly.find(params[:id])
+  @sondage.liked_by current_citoyen
+  redirect_to @sondage
+end
+
+def downvote
+  @sondage = Sondage.friendly.find(params[:id])
+  @sondage.downvote_from current_citoyen
+  redirect_to @sondage
+end
   # GET /sondages/new
   def new
     @sondage = current_administrateur.sondages.build
@@ -69,6 +80,6 @@ class SondagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sondage_params
-      params.require(:sondage).permit(:titre, :description,  :image, :administrateur_id)
+      params.require(:sondage).permit(:titre, :description,  :image, :pour, :contre, :administrateur_id)
     end
 end

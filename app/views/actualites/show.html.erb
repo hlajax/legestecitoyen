@@ -4,9 +4,14 @@
 		<div class="col-lg-10 offset-lg-1 col-12 m-top-mini">
 			<div class="row">
 				<div class="col-lg-6 col-12 zepad-titre">
+					<p class="text-maj"><small><%= @actualite.category.titre%></small></p>
 					<h1 class="big-titre"><strong><%= @actualite.titre %></strong></h1>
-					<p class="text-maj"><%= @actualite.category.titre%></p>
 					<p><i><%= @actualite.administrateur.email %></i></p>
+					<%= link_to "j'aime", like_actualite_path(@actualite),class:"btn btn-success btn-sm", method: :put %>
+					<%=@actualite.get_likes.size%>
+					<%=@actualite.get_dislikes.size%>
+					<%=@actualite.votes_for.size%>
+					<%= link_to "Je n'aime pas", dislike_actualite_path(@actualite),class:"btn btn-danger btn-sm", method: :put %>
 				</div>
 				<div class="col-lg-6 col-12">
 					<%= image_tag @actualite.image.url,class:"img-fluid"%>
@@ -20,5 +25,7 @@
 		</div>
 	</div>
 </div>
+<%if administrateur_signed_in?%>
 <%= link_to 'Edit', edit_actualite_path(@actualite) %> |
 <%= link_to 'Back', actualites_path %>
+<%end%>

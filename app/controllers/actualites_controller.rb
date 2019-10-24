@@ -11,7 +11,17 @@ class ActualitesController < ApplicationController
   # GET /actualites/1.json
   def show
   end
+  def upvote
+  @actualite = Actualite.friendly.find(params[:id])
+  @actualite.liked_by current_citoyen
+  redirect_to @actualite
+end
 
+def downvote
+  @actualite = Actualite.friendly.find(params[:id])
+  @actualite.downvote_from current_citoyen
+  redirect_to @actualite
+end
   # GET /actualites/new
   def new
     @actualite = current_administrateur.actualites.build

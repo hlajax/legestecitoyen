@@ -11,7 +11,11 @@ class PetitionsController < ApplicationController
   # GET /petitions/1.json
   def show
   end
-
+  def upvote
+  @petition = Petition.friendly.find(params[:id])
+  @petition.liked_by current_citoyen
+  redirect_to @petition
+end
   # GET /petitions/new
   def new
     @petition = current_citoyen.petitions.build

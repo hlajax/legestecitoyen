@@ -1,15 +1,78 @@
 <%=render 'menus/menu'%>
 <div class="container-fluid m-top-mini">
 	<div class="row">
+	<div class="col-lg-12 col-12"><span class="titre-section">Actualités à la une</span></div>
+	</div>
+	<div class="row m-top-mini">
+		<div class="col-lg-3 col-12">
+			<%@actus.each do |actualite|%>
+			<div style="width:100%;" >
+      <%=image_tag actualite.image.url, class:"img-fluid"%>
+      <div style="background-color:transaparent;width:100%;padding:5%;">
+        <h6 class="text-bold text-maj">
+        <%=link_to actualite do %>
+        <%=actualite.titre%>
+        <% end %>
+        </h6>
+		  <p><span class="text-maj text-bold text-success"><small><%=actualite.category.titre%></small></span><span> <small class="">il y a <%= time_ago_in_words(actualite.created_at) %></small></span></p>
+        <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+      </div>
+</div>
+			<%end%>
+		</div>
+		<div class="col-lg-6 col-12">
+			<%@actune.each do |actualite|%>
+				<div style="width:100%;">
+					<%=image_tag actualite.image.url, class:"img-fluid"%>
+					<div style="background-color:transaparent;width:100%;padding:5%;">
+						<h2 class="text-bold text-maj">
+						<%=link_to actualite do %>
+						<%=actualite.titre%>
+						<% end %>
+						</h2>
+						<p>
+						<span class="text-maj text-bold text-success"><small><%=actualite.category.titre%></small></span>
+						<span> <small class="">il y a <%= time_ago_in_words(actualite.created_at) %></small></span>
+						</p>
+					</div>
+					<img class="img-fluid" src="https://res.cloudinary.com/aseed/image/upload/v1569888266/EBEN_RADIO-26012016-4_OK_z7pyvc.jpg">
+				</div>
+			<%end%>
+		</div>
+		<div class="col-lg-3 col-12">
+				<%@actualites.each do |actualite|%>
+			<div style="width:100%;" >
+      <%=image_tag actualite.image.url, class:"img-fluid"%>
+      <div style="background-color:transaparent;width:100%;padding:5%;">
+        <h6 class="text-bold text-maj">
+        <%=link_to actualite do %>
+        <%=actualite.titre%>
+        <% end %>
+        </h6>
+		  <p><span class="text-maj text-bold text-success"><small><%=actualite.category.titre%></small></span><span> <small class="">il y a <%= time_ago_in_words(actualite.created_at) %></small></span></p>
+        <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+      </div>
+</div>
+			<%end%>
+		</div>
+	</div>
+</div>
+
+
+<!--<div class="container-fluid m-top-mini">
+	<div class="row">
 		<div class="col-lg-6 col-12">
 			 		<div class="carousel">
   <%@actualites.each do |actualite|%>
    <div class="carousel-cell">
-   		<figure class="snipactus"><%=image_tag actualite.image.url%>
+   		<figure class="snipactus"><%=image_tag actualite.image.url, class:"img-fluid"%>
   <figcaption>
     <h3 class="title3"><%=actualite.category.titre%></h3>
-    <h3 class="title1"><%=actualite.titre%></h3>
-  </figcaption>
+    <h3 class="title1">
+    	<%=actualite.titre%>
+    </h3>
+    <p><small class="text-white">il y a <%= time_ago_in_words(actualite.created_at) %></small></p>
+  </figcaption><%=link_to "", actualite%>
 </figure>
   </div>
   <% end %>
@@ -43,44 +106,144 @@
 	</div>
 </div>
 	</div>
-</div>
-<div class="container-fluid m-top-mini">
+</div>-->
+<hr class="dv-geste">
+<div class="container-fluid m-top-xs">
 	<div class="row">
-			<div class="col-lg-12 col-12 bg-geste" style="height:25px;">
-					<span class="titre-section">Actualités à la une</span>
+			<div class="col-lg-12 col-12">
+					<span class="titre-section">Poilitique</span>
 			</div>
-					<div class="col-lg-4 p-5">
-				<h4>Konect</h4>
-				<img class="img-fluid" src="https://res.cloudinary.com/aseed/image/upload/v1568275113/SEEG-BRIG-BLEUE_x01lsk.jpg">
-		</div>
-				<div class="col-lg-8 p-5 ">
-				
-				<div class="row">
-				<%@actualites.each do |actualite|%>
-				<div class="card mb-3" >
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <%=image_tag actualite.image.url, class:"card-img"%>
-    </div>
-    <div class="col-md-8 zepad-card">
-      <div class="card-body">
-        <h5 class="card-title"><%=actualite.titre%></h5>
-        <p class="card-text"><%=truncate(actualite.titre, :length=>50)%></p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-  <% end %>
+					
+				<div class="col-lg-12 ">
+					<div class="row">
+						<div class="col-lg-5">
+											<%@politune.each do |actualite|%>
+				<div style="width:100%;">
+					<%=image_tag actualite.image.url, class:"img-fluid"%>
+      				<div style="background-color:transaparent;width:100%;padding:5%;">
+        				<h5 class="text-bold text-maj"><%=actualite.titre%></h5>
+        				<!--<p class="card-text"><%=raw (truncate actualite.contenu, :length=>50)%></p>-->
+      				</div>
+      			</div>
+  				<% end %>
+  				<img class="img-fluid" src="https://res.cloudinary.com/aseed/image/upload/v1569888266/EBEN_RADIO-26012016-4_OK_z7pyvc.jpg">
+						</div>
+						<div class="col-lg-7">
+							<div class="row">
+									<%@politiques.each do |actualite|%>
+				<div class="col-lg-6 col-12" >
+						
 
-</div>
-		</div>
+<figure class="snip1253">
+  <div class="image"><%=image_tag actualite.image.url%></div>
+  <figcaption>
+    <h3><%=actualite.titre%></h3>
+    <!--<p>
+ 		<%=raw(truncate actualite.titre, :length=>150)%>
+    </p>-->
+  </figcaption>
+  <!--<footer>
+    <div class="views"><i class="ion-eye"></i>2,907</div>
+  </footer><a href="#"></a>--><%=link_to "", actualite%>
+</figure>
+				</div>
+						<% end %>
+							</div>
+						</div>
+					</div>		
+				</div>
 	</div>
 </div>
+<hr class="dv-geste">
+<div class="container-fluid m-top-xs">
+	<div class="row">	
+				<div class="col-lg-6 ">
+					<div class="row">
+						<div class="col-lg-12">
+										<span class="titre-section">Sport</span>
+											<%@sportune.each do |actualite|%>
+				<div style="width:100%;">
+					<%=image_tag actualite.image.url, class:"img-fluid"%>
+      				<div style="background-color:transaparent;width:100%;padding:5%;">
+        				<h5 class="card-title"><%=actualite.titre%></h5>
+        				<p class="card-text"><%=truncate(actualite.titre, :length=>50)%></p>
+        				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      				</div>
+      			</div>
+  				<% end %>
+						</div>
+						<div class="col-lg-12">
+							<div class="row">
+									<%@sports.each do |actualite|%>
+				<div class="col-lg-6 col-12" >
+						
 
+<figure class="snip1253">
+  <div class="image"><%=image_tag actualite.image.url%></div>
+  <figcaption>
+    <h3><%=actualite.titre%></h3>
+    <!--<p>
+ 		<%=raw(truncate actualite.titre, :length=>150)%>
+    </p>-->
+  </figcaption>
+  <!--<footer>
+    <div class="views"><i class="ion-eye"></i>2,907</div>
+  </footer><a href="#"></a>--><%=link_to "", actualite%>
+</figure>
+				</div>
+						<% end %>
+							</div>
+						</div>
+					</div>		
+				</div>
+				
+								<div class="col-lg-6 ">
+					<div class="row">
+						<div class="col-lg-12">
+										<span class="titre-section">Environnement</span>
+											<%@envune.each do |actualite|%>
+				<div style="width:100%;">
+					<%=image_tag actualite.image.url, class:"img-fluid"%>
+      				<div style="background-color:transaparent;width:100%;padding:5%;">
+        				<h5 class="card-title"><%=actualite.titre%></h5>
+        				<p class="card-text"><%=truncate(actualite.titre, :length=>50)%></p>
+        				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      				</div>
+      			</div>
+  				<% end %>
+						</div>
+						<div class="col-lg-12">
+							<div class="row">
+									<%@environnements.each do |actualite|%>
+				<div class="col-lg-6 col-12" >
+						
+
+<figure class="snip1253">
+  <div class="image"><%=image_tag actualite.image.url%></div>
+  <figcaption>
+    <h3><%=actualite.titre%></h3>
+    <!--<p>
+ 		<%=raw(truncate actualite.titre, :length=>150)%>
+    </p>-->
+  </figcaption>
+  <!--<footer>
+    <div class="views"><i class="ion-eye"></i>2,907</div>
+  </footer><a href="#"></a>--><%=link_to "", actualite%>
+</figure>
+				</div>
+						<% end %>
+							</div>
+						</div>
+					</div>		
+				</div>
+				
+				
+	</div>
+</div>
+<hr class="dv-geste">
 	<div class="container-fluid m-top-mini">
 		<div class="row">
-			<div class="col-lg-12 col-12 bg-geste" style="height:25px;">
+			<div class="col-lg-12 col-12 ">
 					<span class="titre-section">les dernières pétitions</span>
 			</div>
 				
@@ -108,13 +271,10 @@
   <div class="image"><%=image_tag petition.image.url%></div>
   <figcaption>
     <h3><%=petition.titre%></h3>
-    <p>
- 		<%=raw(truncate petition.titre, :length=>150)%>
-    </p>
   </figcaption>
   <!--<footer>
     <div class="views"><i class="ion-eye"></i>2,907</div>
-  </footer><a href="#"></a>-->
+  </footer><a href="#"></a>--><%=link_to "", petition%>
 </figure>
 				</div>
   <% end %>
@@ -124,11 +284,11 @@
 	</div>
 </div>
 	
-	
+	<hr class="dv-geste">
 	<div class="container-fluid m-top-mini">
 		<div class="row">
-			<div class="col-lg-12 col-12 bg-geste" style="height:25px;">
-					<span class="titre-section">les derniers sondages</span>
+			<div class="col-lg-12 col-12 ">
+					<span class="titre-section">les derniers avis</span>
 			</div>
 				
 	</div>
@@ -142,7 +302,7 @@
   <figcaption>
     <h3 class="title1"><%=sondage.titre%></h3>
   </figcaption>
-</figure>
+</figure><%=link_to "", sondage%>
 	</div>
 		<% end %>
 				</div>

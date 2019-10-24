@@ -23,17 +23,10 @@
 						</div>
 				</div>
 				<div class="col-lg-4 col-12">
-						<p><%= @petition.citoyen.email%></p>
+						<p>Pétition initiée par <%= @petition.citoyen.email%></p>
 						<p><%= @petition.petition_cat.titre%></p>
-				</div>
-				<div class="col-lg-8 col-12">
-						<div class="jumbotron">
-  							<h1 class="display-5">Lancez une pétition!</h1>
-  							<p class="lead">
-  											La personne qui a lancé cette pétition a décidé d'agir. Ferez-vous la même chose ?
-							</p>
-  							<a class="btn btn-primary" href="#" role="button">Lancez une pétition</a>
-						</div>
+						<p><%=@petition.votes_for.size%> signature(s) pour cette pétition</p>
+						<%= link_to "Signer la pétition", like_petition_path(@petition),class:"btn btn-geste", method: :put %>
 				</div>
 		</div>
 </div>
