@@ -131,13 +131,13 @@
 						<div class="col-lg-7">
 							<div class="row">
 									<%@politiques.each do |actualite|%>
-				<div class="col-lg-6 col-6" >
+				<div class="col-lg-6 col-12" >
 						
 
 <figure class="snip1253">
   <div class="image"><%=image_tag actualite.image.url%></div>
   <figcaption>
-    <h3 class="petit-titre"><%=actualite.titre%></h3>
+    <h3><%=actualite.titre%></h3>
     <!--<p>
  		<%=raw(truncate actualite.titre, :length=>150)%>
     </p>-->
@@ -271,6 +271,7 @@
   <div class="image"><%=image_tag petition.image.url%></div>
   <figcaption>
     <h3><%=petition.titre%></h3>
+    <p><%=petition.votes_for.size%> signature(s) pour cette pétition</p>
   </figcaption>
   <!--<footer>
     <div class="views"><i class="ion-eye"></i>2,907</div>
@@ -283,8 +284,7 @@
 		</div>
 	</div>
 </div>
-	
-	<hr class="dv-geste">
+<hr class="dv-geste">
 	<div class="container-fluid m-top-mini">
 		<div class="row">
 			<div class="col-lg-12 col-12 ">
@@ -301,6 +301,17 @@
 				<figure class="snipsond"><%=image_tag sondage.image.url%>
   <figcaption>
     <h3 class="title1"><%=sondage.titre%></h3>
+    <div class="row">
+    	<div class="col-lg-4 col-4">
+    		    <h6><span class="text-vote"><%=sondage.votes_for.size%></span><span> vote(s)</span></h6>
+    	</div>
+    	<div class="col-lg-4 col-4">
+    		<h6><span class="text-vote text-success"><%=sondage.get_likes.size%></span><span> <%=sondage.pour%></span></h6>
+    	</div>
+    	<div class="col-lg-4 col-4">
+				<h6><span class="text-vote text-danger"><%=sondage.get_dislikes.size%></span><span> <%=sondage.contre%></span></h6>
+    	</div>
+    </div>
   </figcaption>
 </figure><%=link_to "", sondage%>
 	</div>
@@ -309,3 +320,4 @@
 					</div>
 	</div>
 </div>
+

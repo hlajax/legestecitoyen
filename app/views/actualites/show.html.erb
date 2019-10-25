@@ -1,30 +1,19 @@
-<%= render 'menus/menucat'%>
-<div class="container-fluid" style="background:url('<%=@actualite.image.url%>')no-repeat;background-size:cover;background-position:center top bottom;">
-	<div class="row align-items-center">
-		                <div style="width:15%;padding:1%;background-color:white;margin-top:20%;">
-                        <a href="/"><img src="https://res.cloudinary.com/aseed/image/upload/v1568370850/Le_Geste_Citoyen_Logo_Couleur_dy6ygy.jpg" class="img-fluid"></a>
-                </div>
-	</div>
-</div>
-<div class="container-fluid">
+<%= render 'menus/menu'%>
+<div class="container">
 	<div class="row">
 		<div class="col-lg-12 col-12 m-top-mini">
 			<div class="row">
-				<div class="col-lg-1 col-12"></div>
-				<div class="col-lg-2 col-12" style="border-right:1px solid #ccc;">
+				<div class="col-lg-9 col-12">
+					<div class="row">
+						<div class="col-lg-12 col-12">
+						<h1 class="big-titre text-maj"><strong><%= @actualite.titre %></strong></h1>
+						<%=image_tag @actualite.image.url, class:"img-fluid"%>
+					<p>Publié par: <i><%= @actualite.administrateur.email %></i></p>
+					<p class="text-maj">Catégorie: <small><%= @actualite.category.titre%></small></p>
 					<%= link_to "j'aime", like_actualite_path(@actualite),class:"btn btn-success", method: :put %>
 					<%= link_to "Je n'aime pas", dislike_actualite_path(@actualite),class:"btn btn-danger", method: :put %>
 					<%=@actualite.get_likes.size%>
 					<%=@actualite.get_dislikes.size%>
-					<%=@actualite.votes_for.size%>
-				</div>
-				<div class="col-lg-8 col-12">
-					<div class="row">
-						<div class="col-lg-12 col-12">
-					<h1 class="big-titre text-maj"><strong><%= @actualite.titre %></strong></h1>
-					<p>Publié par: <i><%= @actualite.administrateur.email %></i></p>
-					<p class="text-maj">Catégorie: <small><%= @actualite.category.titre%></small></p>
-					
 						</div>
 					</div>
 						<div class="row">
@@ -32,6 +21,19 @@
 						<%= raw(@actualite.contenu) %>
 				</div>
 			</div>
+				</div>
+				<div class="col-lg-2 col-12">
+					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- lgstc-ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8982812007341337"
+     data-ad-slot="9565480161"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 				</div>
 			</div>
 		

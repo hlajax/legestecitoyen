@@ -5,6 +5,9 @@ class ActualitesController < ApplicationController
   # GET /actualites.json
   def index
     @actualites = Actualite.all
+	@politiques = Actualite.all.where(category: [1]).limit(10).order("created_at DESC")
+	 @sports = Actualite.all.where(category: [2]).limit(10).order("created_at DESC")
+	 @environnements = Actualite.all.where(category: [3]).limit(10).order("created_at DESC")
   end
 
   # GET /actualites/1
