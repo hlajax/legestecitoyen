@@ -489,6 +489,7 @@ figure.snip1253 h3 {
   /*margin-left: 60px;*/
   display: inline-block;
   text-transform: uppercase;
+	font-weight: bold;
 	font-size: 20px;
 }
 figure.snip1253 p {
