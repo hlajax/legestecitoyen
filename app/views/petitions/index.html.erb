@@ -2,39 +2,6 @@
 <div class="container-fluid">
 	<div class="row m-top-mini">
 
-		<div class="col-lg-12 col-12">
-		<h3>Découvrir des pétitions</h3>
-			<div class="card-columns">
- <% @petitions.each do |petition| %>
-  <div class="card">
-    <%= image_tag petition.image.url, class:"card-img-top" %>
-    <div class="card-body">
-      <h5 class="card-title"><%= petition.titre %></h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p><%=petition.votes_for.size%> signature(s) pour cette pétition</p>
-      <%=link_to "Plus d'informations", petition, class:"btn btn-geste"%>
-    </div>
-  </div>
-  <% end %>
-</div>
-		</div>
-			<div class="col-lg-6 col-12">
-					<div class="jumbotron">
-												<h3>Lancez une pétition</h3>
-  							<p class="lead">
-  											Les personnes qui ont lancées ces pétitions ont décidées d'agir. 
-  											<br/>Ferez-vous la même chose ?
-							</p>
-  							
-  							<a class="btn btn-primary" href="#" role="button">Lancez une pétition</a>
-  								
-						</div>
-	</div>
-	</div>
-</div>
-<div class="container-fluid">
-	<div class="row m-top-mini">
-
 		<div class="col-lg-9 col-12">
 		<h3>Découvrir des pétitions</h3>
 			<div class="card-columns">
@@ -45,6 +12,7 @@
   <figcaption>
     <h3><%=petition.titre%></h3>
     <p><%=petition.votes_for.size%> signature(s) pour cette pétition</p>
+    <%=link_to "Plus d'informations", petition, class:"btn btn-geste"%>
   </figcaption>
   <!--<footer>
     <div class="views"><i class="ion-eye"></i>2,907</div>

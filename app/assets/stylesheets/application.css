@@ -95,7 +95,7 @@ a{
 /*-----les paddings fin--*/
 /*----les textes-------*/
 h1,h2,h3,h4,h5,h6{
-	/*font-family: 'Merriweather', serif;*/
+	/**/
 	line-height: 1.5;
 }
 .card{
@@ -112,14 +112,14 @@ h1,h2,h3,h4,h5,h6{
 }
 .big-titre{
 	font-size: 36px;
-	font-family: 'Merriweather', serif;
+	
 }
 .big-titre::first-letter{
 text-transform: uppercase;
 }
 .contenu p{
 	font-size: 18px;
-	font-family: 'Merriweather', serif;
+	
 	line-height: 1.5;
 }
 .contenu p:first-of-type::first-letter {
@@ -153,13 +153,12 @@ text-transform: uppercase;
 	font-weight: bold;
 }
 .titre-section{
-	font-family: 'Merriweather', serif;
 	font-size:28px;
 	font-weight:bold;
 	text-transform:uppercase;
 }
 .titre-sport{
-	font-family: 'Merriweather', serif;
+	
 	font-size:8px;
 	font-weight:bold;
 	text-transform:uppercase;
@@ -205,7 +204,7 @@ text-transform: uppercase;
 /*---flickity----*/
 /*---snippets pour actualites----*/
 .snipactus {
-  font-family: 'Merriweather', serif;
+  
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -280,7 +279,7 @@ text-transform: uppercase;
 /*----snippets  pour actualites end----------------------------*/
 /*---snippets for sondage et petitions----*/
 .snip1581 {
-  font-family: 'Merriweather', serif;
+  
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -352,7 +351,7 @@ text-transform: uppercase;
 /*----snippets end----------------------------*/
 /*---snippets for sondage ----*/
 .snipsond {
-  font-family: 'Merriweather', serif;
+  
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -424,7 +423,7 @@ text-transform: uppercase;
 /*----snippets sondages end----------------------------*/
 /*----------snippets for petitions sections--------*/
 figure.snip1253 {
-  font-family: 'Raleway', Arial, sans-serif;
+  
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -617,14 +616,14 @@ figure.snip1253.hover img {
 }
 .big-titre{
 	font-size: 24px;
-	font-family: 'Merriweather', serif;
+	
 }
 .big-titre::first-letter{
 text-transform: uppercase;
 }
 .contenu p{
 	font-size: 18px;
-	font-family: 'Merriweather', serif;
+	
 	line-height: 1.5;
 }
 .contenu p:first-of-type::first-letter {
@@ -657,7 +656,7 @@ text-transform: uppercase;
 	font-weight: bold;
 }
 .titre-section{
-	font-family: 'Merriweather', serif;
+	
 	font-size:16px;
 	font-weight:bold;
 	text-transform:uppercase;
@@ -700,7 +699,7 @@ text-transform: uppercase;
 /*---flickity----*/
 /*---snippets pour actualites----*/
 .snipactus {
-  font-family: 'Merriweather', serif;
+  
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -770,7 +769,7 @@ text-transform: uppercase;
 /*----snippets  pour actualites end----------------------------*/
 /*---snippets for sondage et petitions----*/
 .snip1581 {
-  font-family: 'Merriweather', serif;
+  
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -842,7 +841,7 @@ text-transform: uppercase;
 /*----snippets end----------------------------*/
 /*---snippets for sondage ----*/
 .snipsond {
-  font-family: 'Merriweather', serif;
+  
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -914,7 +913,7 @@ text-transform: uppercase;
 /*----snippets sondages end----------------------------*/
 /*----------snippets for petitions sections--------*/
 figure.snip1253 {
-  font-family: 'Raleway', Arial, sans-serif;
+  
   color: #fff;
   position: relative;
   overflow: hidden;
