@@ -131,13 +131,13 @@
 						<div class="col-lg-7">
 							<div class="row">
 									<%@politiques.each do |actualite|%>
-				<div class="col-lg-6 col-12" >
+				<div class="col-lg-6 col-6" >
 						
 
 <figure class="snip1253">
   <div class="image"><%=image_tag actualite.image.url%></div>
   <figcaption>
-    <h3><%=actualite.titre%></h3>
+    <h3 class="petit-titre"><%=actualite.titre%></h3>
     <!--<p>
  		<%=raw(truncate actualite.titre, :length=>150)%>
     </p>-->
