@@ -104,10 +104,6 @@ h1,h2,h3,h4,h5,h6{
 .text-bold{
 	font-weight: bold;
 }
-	.big-titre{
-		font-size: 36px;
-		font-family: 'Frank Ruhl Libre', serif;
-	}
 .text-cap{
 	text-transform: capitalize;
 }
@@ -609,15 +605,11 @@ figure.snip1253.hover img {
 .text-bold{
 	font-weight: bold;
 }
-	.big-titre{
-		font-size: 36px;
-		font-family: 'Frank Ruhl Libre', serif;
-	}
 .text-cap{
 	text-transform: capitalize;
 }
 .big-titre{
-	font-size: 40px;
+	font-size: 24px;
 	font-family: 'Merriweather', serif;
 }
 .big-titre::first-letter{
