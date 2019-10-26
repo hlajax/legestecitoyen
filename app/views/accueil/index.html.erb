@@ -3,7 +3,7 @@
 	<div class="row">
 	<div class="col-lg-12 col-12"><span class="titre-section">Actualités à la une</span></div>
 	</div>
-	<div class="row m-top-mini">
+	<div class="row m-top-xs">
 		<div class="col-lg-3 col-12 order-lg-1 order-6">
 			<%@actus.each do |actualite|%>
 			<div style="width:100%;" >
@@ -24,8 +24,8 @@
 			<%@actune.each do |actualite|%>
 				<div style="width:100%;">
 					<%=image_tag actualite.image.url, class:"img-fluid"%>
-					<div style="background-color:transaparent;width:100%;padding:5%;">
-						<h2 class="big-titre-accueil text-bold text-maj">
+					<div style="background-color:transaparent;width:100%;padding:3%;">
+						<h2 class="big-titre-accueil text-maj">
 						<%=link_to actualite do %>
 						<%=actualite.titre%>
 						<% end %>
@@ -121,7 +121,7 @@
 				<div style="width:100%;">
 					<%=image_tag actualite.image.url, class:"img-fluid"%>
       				<div style="background-color:transaparent;width:100%;padding:5%;">
-        				<h5 class="text-bold text-maj"><%=actualite.titre%></h5>
+        				<h5 class="text-bold text-maj"><%=link_to actualite do %><%=actualite.titre%><% end %></h5>
         				<!--<p class="card-text"><%=raw (truncate actualite.contenu, :length=>50)%></p>-->
       				</div>
       			</div>
@@ -165,7 +165,7 @@
 				<div style="width:100%;">
 					<%=image_tag actualite.image.url, class:"img-fluid"%>
       				<div style="background-color:transaparent;width:100%;padding:5%;">
-        				<h5 class="text-bold text-maj"><%=actualite.titre%></h5>
+        				<h5 class="text-bold text-maj"><%=link_to actualite do %><%=actualite.titre%><% end %></h5>
         				<p class="card-text"><%=raw actualite.contenu.truncate(200)%></p>
       				</div>
       			</div>
@@ -204,7 +204,7 @@
 				<div style="width:100%;">
 					<%=image_tag actualite.image.url, class:"img-fluid"%>
       				<div style="background-color:transaparent;width:100%;padding:5%;">
-        				<h5 class="text-bold text-maj"><%=actualite.titre%></h5>
+        				<h5 class="text-bold text-maj"><%=link_to actualite do %><%=actualite.titre%><% end %></h5>
         				<p class="card-text"><%=raw actualite.contenu.truncate(200)%></p>
       				</div>
       			</div>
@@ -299,17 +299,6 @@
 				<figure class="snipsond"><%=image_tag sondage.image.url%>
   <figcaption>
     <h3 class="title1"><%=sondage.titre%></h3>
-    <div class="row">
-    	<div class="col-lg-4 col-4">
-    		    <h6><span class="text-vote"><%=sondage.votes_for.size%></span><span> vote(s)</span></h6>
-    	</div>
-    	<div class="col-lg-4 col-4">
-    		<h6><span class="text-vote text-success"><%=sondage.get_likes.size%></span><span> <%=sondage.pour%></span></h6>
-    	</div>
-    	<div class="col-lg-4 col-4">
-				<h6><span class="text-vote text-danger"><%=sondage.get_dislikes.size%></span><span> <%=sondage.contre%></span></h6>
-    	</div>
-    </div>
   </figcaption>
 </figure><%=link_to "", sondage%>
 	</div>

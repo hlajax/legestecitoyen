@@ -15,6 +15,7 @@
  */
 body{
     background-color:white;
+	font-family: 'Open Sans', sans-serif;
 }
 a{
 	color: black;
@@ -98,6 +99,7 @@ a{
 /*-----les paddings fin--*/
 /*----les textes-------*/
 h1,h2,h3,h4,h5,h6{
+	font-family: 'Open Sans', sans-serif;
 	/**/
 	line-height: 1.5;
 }
@@ -115,7 +117,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .big-titre-accueil{
 	font-size: 36px;
-	
+	font-weight:800;
 }
 .big-titre{
 	font-size: 36px;
@@ -160,9 +162,9 @@ text-transform: uppercase;
 	font-weight: bold;
 }
 .titre-section{
-	font-size:28px;
+	font-size:24px;
 	font-weight:bold;
-	text-transform:uppercase;
+	text-transform:capitalize;
 }
 .titre-sport{
 	
@@ -566,7 +568,6 @@ figure.snip1253.hover img {
 }
 .dv-geste{
      background-color: #003044;
-	height: 10px;
 }
 .btn-geste{
      background-color: #003044;
@@ -994,7 +995,6 @@ figure.snip1253 h3 {
   display: inline-block;
   text-transform: uppercase;
 	font-size: 12px;
-	text-align: center;
 }
 figure.snip1253 p {
   font-size: 0.8em;
