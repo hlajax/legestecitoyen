@@ -75,6 +75,9 @@ a{
 .m-bottom-xs{
 	margin-bottom: 1%;
 }
+.m-bottom-mini{
+	margin-bottom: 2.5%;
+}
 .m-bottom-big{
 	margin-bottom: 5%;
 }
@@ -109,6 +112,10 @@ h1,h2,h3,h4,h5,h6{
 }
 .text-cap{
 	text-transform: capitalize;
+}
+.big-titre-accueil{
+	font-size: 36px;
+	
 }
 .big-titre{
 	font-size: 36px;
@@ -423,7 +430,6 @@ text-transform: uppercase;
 /*----snippets sondages end----------------------------*/
 /*----------snippets for petitions sections--------*/
 figure.snip1253 {
-  font-weight:bold;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -586,6 +592,9 @@ figure.snip1253.hover img {
 .m-bottom-xs{
 	margin-bottom: 1%;
 }
+.m-bottom-mini{
+	margin-bottom: 2.5%;
+}
 .m-bottom-big{
 	margin-bottom: 5%;
 }
@@ -613,6 +622,10 @@ figure.snip1253.hover img {
 }
 .text-cap{
 	text-transform: capitalize;
+}
+.big-titre-accueil{
+	font-size: 24px;
+	
 }
 .big-titre{
 	font-size: 24px;
@@ -674,7 +687,7 @@ text-transform: uppercase;
 }
 
 .carousel-cell-2 {
-  width: 50%;
+  width: 65%;
   height: 200px;
   margin-right: 10px;
 }
@@ -913,7 +926,6 @@ text-transform: uppercase;
 /*----snippets sondages end----------------------------*/
 /*----------snippets for petitions sections--------*/
 figure.snip1253 {
-  font-weight:bold;
   color: #fff;
   position: relative;
   overflow: hidden;
