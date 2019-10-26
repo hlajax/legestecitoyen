@@ -942,8 +942,10 @@ figure.snip1253 img {
   position: relative;
 }
 figure.snip1253 figcaption {
-  margin: -40px 15px 0;
-  padding: 15px ;
+  margin: 0px 15px 0;
+  padding: 5px ;
+  /*margin: -40px 15px 0;
+  padding: 15px ;*/
   position: relative;
   background-color: #ffffff;
 }
@@ -979,7 +981,8 @@ figure.snip1253 h3 {
   /*margin-left: 60px;*/
   display: inline-block;
   text-transform: uppercase;
-	font-size: 14px;
+	font-size: 12px;
+	text-align: center;
 }
 figure.snip1253 p {
   font-size: 0.8em;
