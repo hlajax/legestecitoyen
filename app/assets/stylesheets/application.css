@@ -110,18 +110,17 @@ h1,h2,h3,h4,h5,h6{
 	text-transform: uppercase;
 }
 .text-bold{
-	font-weight: bold;
+	font-weight: 800;
 }
 .text-cap{
 	text-transform: capitalize;
 }
 .big-titre-accueil{
-	font-size: 36px;
+	font-size: 30px;
 	font-weight:800;
 }
 .big-titre{
 	font-size: 36px;
-	
 }
 .big-titre::first-letter{
 text-transform: uppercase;
@@ -137,17 +136,17 @@ text-transform: uppercase;
   font-size: 50px;
 }
 .nav-link{
-    color: black;
-    font-size: 16px;
-    text-transform:uppercase;
-	font-weight: bold;
+    color: grey;
+    font-size: 18px;
+	font-weight: lighter;
+    /*text-transform:uppercase;
+	font-weight: bold;*/
 }
 
 .nav-link:hover{
-    color: black;
-    font-size: 16px;
-    text-transform:uppercase;
-	font-weight: bold;
+    color:  #003044;
+    /*text-transform:uppercase;
+	font-weight: bold;*/
 }
 .nav-cat .nav-link{
     color: white;
@@ -493,12 +492,14 @@ figure.snip1253 p {
 }
 figure.snip1253 h3 {
   min-height: 50px;
+	/*height: auto;*/
   margin-bottom: 10px;
   /*margin-left: 60px;*/
   display: inline-block;
-  text-transform: uppercase;
 	font-weight: bold;
 	font-size: 20px;
+	line-height: normal;
+	text-transform: uppercase;
 }
 figure.snip1253 p {
   font-size: 14px;
@@ -534,12 +535,66 @@ figure.snip1253.hover img {
   -webkit-transform: scale(1.15);
   transform: scale(1.15);
 }
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+ overflow-y: hidden;
+  padding-top: 20px;
+}
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+	.box-img{
+		width:40%;
+		float:left;
+		background-color:transparent;
+	}
+.img-box{
+	width:150px;
+	height:150px;
+}
+.txt-box{
+	background-color:transaparent;
+	width:60%;
+	padding:0%;
+	float:left;
+}
+	.txt-box h6{
+		font-weight: 800;
+		text-transform: capitalize;
+	}
 /*---------snippets for petitions sections end----*/
 /*-------------------------------------------------------------end PC version-------------------------------------------------------*/
 @media all and (max-width: 414px) and (min-width: 320px) {
   .logo{
 	width: 100%;
 }
+	.box-img{
+		width:40%;
+		float:left;
+		background-color:transparent;
+	}
+.img-box{
+	width:150px;
+	height:150px;
+}
+.txt-box{
+	background-color:transaparent;
+	width:55%;
+	padding-left:10%;
+	float:left;
+}
+	.txt-box h6{
+		font-weight: 800;
+		text-transform: capitalize;
+	}
 /*----les bgs----------*/
 .bg-trans{
 	background-color: transparent;
@@ -619,7 +674,7 @@ figure.snip1253.hover img {
 	text-transform: uppercase;
 }
 .text-bold{
-	font-weight: bold;
+	font-weight: 800;
 }
 .text-cap{
 	text-transform: capitalize;
@@ -648,14 +703,14 @@ text-transform: uppercase;
 .nav-link{
     color: black;
     font-size: 12px;
-    text-transform:uppercase;
-	font-weight: bold;
+    /*text-transform:uppercase;
+	font-weight: bold;*/
 }
 .nav-link:hover{
     color: black;
     font-size: 12px;
-    text-transform:uppercase;
-	font-weight: bold;
+    /*text-transform:uppercase;
+	font-weight: bold;*/
 }
 	.nav-cat .nav-link{
     color: white;
