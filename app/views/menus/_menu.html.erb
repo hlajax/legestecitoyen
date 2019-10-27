@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid d-xl-none d-lg-none d-md-none d-block">
         <div class="row bg-white ">
                 <div class="col-lg-3 col-6 offset-lg-0  order-xl-first  order-lg-first order-md-first  order-first m-bottom-xs">
                         <a href="/"><img src="https://res.cloudinary.com/aseed/image/upload/v1568370850/Le_Geste_Citoyen_Logo_Couleur_dy6ygy.jpg" class="img-fluid logo"></a>
@@ -57,8 +57,8 @@
         					</div>
       					</li>
       					<% else %>
-      					<li class="nav-item">
-                                <%=link_to "Connexion", new_citoyen_session_path, class:"btn btn-geste"%>
+      					<li class="nav-item m-top-big-btn">
+                                <%=link_to "Connexion", new_citoyen_session_path, class:"btn btn-geste btn-sm"%>
                             </li>
       				<%end %>
                     </ul>
