@@ -21,7 +21,8 @@ a{
 	color: black;
 }
 .logo{
-	width: 50%;
+	width: 80%;
+	margin-left: 0%;
 }
 /*----les bgs----------*/
 .bg-trans{
@@ -190,8 +191,8 @@ text-transform: uppercase;
 }
 
 .carousel-cell-2 {
-  width: 30%;
-  height: 400px;
+  width: 33%;
+  height: 250px;
   margin-right: 10px;
 }
 
@@ -374,6 +375,7 @@ text-transform: uppercase;
   font-size: 14px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
+
 .snipsond * {
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
@@ -383,7 +385,7 @@ text-transform: uppercase;
 .snipsond img {
   width: 100%;
   vertical-align: top;
-  height: 400px;
+  height: 250px;
 }
 .snipsond figcaption {
   position: absolute;
@@ -400,17 +402,26 @@ text-transform: uppercase;
   flex-direction: column;
   justify-content: flex-end;
 }
+.snipsond  a {
+ color: white;
+}
 .snipsond h3 {
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 1;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: normal;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 3px 0;
 }
+
 .snipsond .title1 {
-  font-weight: 700;
-	font-size: 20px;
+  font-weight: 800;
+	font-size: 16px;
+	line-height: normal;
+}
+.snipsond .title1 a{
+  font-weight: 800;
+	font-size: 16px;
 	line-height: normal;
 }
 .snipsond .title2 {
@@ -573,6 +584,35 @@ figure.snip1253.hover img {
 		font-weight: 800;
 		text-transform: capitalize;
 	}
+.sidebar-section {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+
+.sidebar-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 25%;
+}
+	/* Position the items */
+	.sidebar-item:nth-child(2) { top: 25%; }
+	.sidebar-item:nth-child(3) { top: 50%; }
+	.sidebar-item:nth-child(4) { top: 75%; }
+
+.make-me-sticky {
+	position: sticky;
+	top: 0;
+    
+  padding: 0 15px;
+}
+.text-footer{
+	margin-left: 0%;
+
+}
 /*---------snippets for petitions sections end----*/
 /*-------------------------------------------------------------end PC version-------------------------------------------------------*/
 @media all and (max-width: 414px) and (min-width: 320px) {
