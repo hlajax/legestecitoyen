@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :magazines
   resources :sondages do
 	    member do
     put "like", to: "sondages#upvote"

@@ -6,4 +6,5 @@ acts_as_voter
          :recoverable, :rememberable, :validatable
 	has_many :petitions
 	has_many :corruptions
+	mount_uploader :avatar, ImageUploader
 end

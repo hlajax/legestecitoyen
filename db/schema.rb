@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_23_130948) do
+ActiveRecord::Schema.define(version: 2019_10_29_074631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,9 @@ ActiveRecord::Schema.define(version: 2019_10_23_130948) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "nom"
+    t.string "ville"
+    t.string "avatar"
     t.index ["email"], name: "index_citoyens_on_email", unique: true
     t.index ["reset_password_token"], name: "index_citoyens_on_reset_password_token", unique: true
   end
@@ -99,6 +102,17 @@ ActiveRecord::Schema.define(version: 2019_10_23_130948) do
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
+  create_table "magazines", force: :cascade do |t|
+    t.string "titre"
+    t.text "description"
+    t.string "cover"
+    t.string "lien"
+    t.bigint "administrateur_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["administrateur_id"], name: "index_magazines_on_administrateur_id"
   end
 
   create_table "petition_cats", force: :cascade do |t|
@@ -160,6 +174,7 @@ ActiveRecord::Schema.define(version: 2019_10_23_130948) do
   add_foreign_key "corruption_cats", "administrateurs"
   add_foreign_key "corruptions", "citoyens"
   add_foreign_key "corruptions", "corruption_cats"
+  add_foreign_key "magazines", "administrateurs"
   add_foreign_key "petitions", "citoyens"
   add_foreign_key "petitions", "petition_cats"
   add_foreign_key "sondages", "administrateurs"
