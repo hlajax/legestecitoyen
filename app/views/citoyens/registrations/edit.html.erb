@@ -63,10 +63,9 @@
 <h3>Supprimer mon compte</h3>
 
 <p>Vous n'aimez pas le geste citoyen? <%= button_to "Confirmer la suppression du compte", registration_path(resource_name), data: { confirm: "Êtes-vous sûr?" }, method: :delete,class:"btn btn-lg btn-danger btn-block btn-login text-uppercase font-weight-bold mb-2" %></p>
-
-<%= link_to "Retour", :back %>
-
-
+<div class="text-center">
+          <%= link_to "Retour", :back , class:"small" %>
+ </div>
             </div>
           </div>
         </div>

@@ -557,6 +557,7 @@ figure.snip1253.hover img {
   -webkit-transform: scale(1.15);
   transform: scale(1.15);
 }
+/*snipppp*/
 .sidenav {
   height: 100%;
   width: 160px;
@@ -629,7 +630,7 @@ figure.snip1253.hover img {
 }
 
 .login,
-.image {
+.images {
   min-height: 100vh;
 }
 

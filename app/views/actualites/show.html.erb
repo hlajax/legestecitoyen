@@ -9,10 +9,23 @@
 						<%=image_tag @actualite.image.url, class:"img-fluid"%>
 					<p>Publié par: <i><%= @actualite.administrateur.email %></i></p>
 					<p class="text-maj">Catégorie: <small><%= @actualite.category.titre%></small></p>
-					<%= link_to "j'aime", like_actualite_path(@actualite),class:"btn btn-success", method: :put %>
-					<%= link_to "Je n'aime pas", dislike_actualite_path(@actualite),class:"btn btn-danger", method: :put %>
-					<%=@actualite.get_likes.size%>
-					<%=@actualite.get_dislikes.size%>
+					<% if citoyen_signed_in?%>
+                            <%= link_to  like_actualite_path(@actualite),class:"btn btn-success", method: :put do %>
+                            J'aime <span class="badge badge-light"><%=@actualite.get_likes.size%></span>
+                            <%end %>
+					<%= link_to dislike_actualite_path(@actualite),class:"btn btn-danger", method: :put do %>
+     					Je n'aime pas <span class="badge badge-light"> <%=@actualite.get_dislikes.size%></span>
+     					<%end %>
+      					<% else %>
+      					<li class="nav-item d-xl-block d-lg-block d-md-block">
+                               <p class="alert alert-danger"> <span class="text-bold small">Vous devez être connecté pour donner votre avis sur cet article</span>
+                                <%=link_to "Se connecter", new_citoyen_session_path, class:"btn btn-geste btn-sm"%>
+                                </p>
+                            </li>
+      				<%end %>
+					
+					
+					
 						</div>
 					</div>
 						<div class="row">
