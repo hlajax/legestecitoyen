@@ -1,16 +1,33 @@
-<h2>Forgot your password?</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+<div class="container-fluid">
+  <div class="row no-gutter">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h2 class="mb-4 text-bold text-cap">mot de passe oublié?</h2>
+              <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="form-label-group">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:"Email",required:true %>
+    <%= f.label :email %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Recevoir les  instructions",class:"btn btn-lg btn-geste btn-block btn-login text-uppercase font-weight-bold mb-2" %>
   </div>
 <% end %>
+<div class="text-center">
+          <%= render "citoyens/shared/links", class:"small" %>
+ </div>
 
-<%= render "citoyens/shared/links" %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
