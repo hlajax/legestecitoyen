@@ -1,35 +1,34 @@
 <%=render 'menus/menu'%>
+<div class="container-fluid">
+	<div class="row m-top-mini">
+		<%=render 'menus/fmenu'%>
+		<div class="col-lg-8 col-12">
+				<div class="row">
+					<div class="col-lg-8 offset-lg-2 m-top-xs">
+						<img class="img-fluid m-bottom-mini" src="https://res.cloudinary.com/aseed/image/upload/v1569888266/EBEN_RADIO-26012016-4_OK_z7pyvc.jpg">
+					</div>
+					
 
-<h1>Sondages</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Titre</th>
-      <th>Description</th>
-      <th>Slug</th>
-      <th>Image</th>
-      <th>Administrateur</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @sondages.each do |sondage| %>
-      <tr>
-        <td><%= sondage.titre %></td>
-        <td><%= sondage.description %></td>
-        <td><%= sondage.slug %></td>
-        <td><%= sondage.image %></td>
-        <td><%= sondage.administrateur_id %></td>
-        <td><%= link_to 'Show', sondage %></td>
-        <td><%= link_to 'Edit', edit_sondage_path(sondage) %></td>
-        <td><%= link_to 'Destroy', sondage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Sondage', new_sondage_path %>
+	</div>
+		<h3 class="text-bold m-top-xs">Les derniers sondages</h3>
+		<hr>
+			<div class="card-columns">
+ <% @sondages.each do |sondage| %>
+  <div class="card">
+  		<figure class="snip1253">
+  <div class="image"><%=image_tag sondage.image.url%></div>
+  <figcaption>
+    <h3><%=sondage.titre%></h3>
+    <p><%=sondage.votes_for.size%> signature(s) pour ce sondage</p>
+  </figcaption>
+  <!--<footer>
+    <div class="views"><i class="ion-eye"></i>2,907</div>
+  </footer><a href="#"></a>--><%=link_to "", sondage%>
+</figure>
+  </div>
+  <% end %>
+</div>
+		</div>
+		<%=render 'menus/smenu'%>
+	</div>
+</div>

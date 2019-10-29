@@ -1,34 +1,42 @@
 <%=render 'menus/menu'%>
+<div class="container-fluid">
+	<div class="row">
+		<%=render 'menus/fmenu'%>
+		<div class="col-lg-8 col-12">
+					<div class="row">
+					<div class="col-lg-8 offset-lg-2 m-top-mini">
+						<img class="img-fluid m-bottom-mini" src="https://res.cloudinary.com/aseed/image/upload/v1569888266/EBEN_RADIO-26012016-4_OK_z7pyvc.jpg">
+					</div>
+					
 
-<p>
-  <strong>Titre:</strong>
-  <%= @sondage.titre %>
-  					<%= link_to @sondage.pour, like_sondage_path(@sondage),class:"btn btn-success btn-sm", method: :put %>
-					<%=@sondage.get_likes.size%>
-					<%=@sondage.get_dislikes.size%>
-					<%=@sondage.votes_for.size%>
-					<%= link_to @sondage.contre, dislike_sondage_path(@sondage),class:"btn btn-danger btn-sm", method: :put %>
+	</div>
+<div class="row">
+<div class="col-lg-12 col-12 m-top-mini">
+  <h2 class="text-bold text-cap"><%= @sondage.titre %></h2>
+</div>
+<div class="col-lg-6 col-12 m-top-xs">
+ 	  <%=image_tag @sondage.image.url, class:"img-fluid" %>
+</div>
+<div class="col-lg-4  col-12 m-top-xs">
+	<h6><span class="text-bold  text-grand"><%=@sondage.votes_for.size%></span> avis au total</h6>
+ 					<h6>
+ 					<span class="text-bold text-success text-grand"><%=@sondage.get_likes.size%></span> personne(s) ont voté(e)s 
+ 					<span class="text-bold text-maj"><%= @sondage.pour%></span>
+ 					</h6>
+					<h6 ><span class="text-bold text-danger text-grand"><%=@sondage.get_dislikes.size%></span> personne(s) ont voté(e)s 
+					<span class="text-bold text-maj"><%= @sondage.contre%></span>
+ 					</h6>
+ 					<div class="m-top"></div>
+  					<%= link_to @sondage.pour, like_sondage_path(@sondage),class:"btn btn-success btn-block text-grand text-maj text-bold", method: :put %>
+					<%= link_to @sondage.contre, dislike_sondage_path(@sondage),class:"btn btn-danger btn-block text-grand text-maj text-bold", method: :put %>
+</div>
+		<div class="col-lg-12 col-12 m-top-xs">
+			 	  <p>
+  <%=raw(@sondage.description) %>
 </p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @sondage.description %>
-</p>
-
-<p>
-  <strong>Slug:</strong>
-  <%= @sondage.slug %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @sondage.image %>
-</p>
-
-<p>
-  <strong>Administrateur:</strong>
-  <%= @sondage.administrateur_id %>
-</p>
-
-<%= link_to 'Edit', edit_sondage_path(@sondage) %> |
-<%= link_to 'Back', sondages_path %>
+		</div>
+			</div>
+		</div>
+		<%=render 'menus/smenu'%>
+	</div>
+</div>

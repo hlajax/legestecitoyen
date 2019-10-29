@@ -1,8 +1,14 @@
 <%=render 'menus/menu'%>
 <div class="container-fluid">
 	<div class="row m-top-mini">
-		<div class="col-lg-9 col-12 zepad-card">
-			<h3 class="text-bold text-maj">actualités récentes</h3>
+	<%=render 'menus/fmenu'%>
+		<div class="col-lg-8 col-12 zepad-card">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 m-top-xs">
+						<img class="img-fluid m-bottom-mini" src="https://res.cloudinary.com/aseed/image/upload/v1569888167/EBEN_RADIO-11092015_r2cjbo.jpg">
+					</div>
+		</div>
+			<h4 class="text-bold text-maj m-top-mini">actualités récentes</h4>
 			<nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Politique</a>
@@ -79,6 +85,7 @@
 	</div>
 </div>
 		</div>
+		<%=render 'menus/smenu'%>
 	</div>
 </div>
 <!--<h1>Actualites</h1>
