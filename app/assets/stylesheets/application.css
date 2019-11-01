@@ -635,7 +635,17 @@ figure.snip1253.hover img {
 }
 
 .bg-image {
-  background-image: url('https://source.unsplash.com/WEQbe2jBg40/600x1200');
+  background-image: url('https://res.cloudinary.com/aseed/image/upload/v1572590300/sgin_wmf85g.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.bg-image1 {
+  background-image: url('https://res.cloudinary.com/aseed/image/upload/v1572590300/sgup_m7n9pg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.bg-image2 {
+  background-image: url('https://res.cloudinary.com/aseed/image/upload/v1572590300/mdp_utljqp.jpg');
   background-size: cover;
   background-position: center;
 }
