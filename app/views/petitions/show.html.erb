@@ -54,5 +54,7 @@
 				<%=render 'menus/smenu'%>
 		</div>
 </div>
+<%if administrateur_signed_in?%>
 <%= link_to 'Edit', edit_petition_path(@petition) %> |
 <%= link_to 'Back', petitions_path %>
+<% end %>
