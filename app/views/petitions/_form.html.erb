@@ -1,4 +1,14 @@
-<%= form_with(model: petition, local: true) do |form| %>
+<%=render 'menus/menu'%>
+<div class="container-fluid">
+	<div class="row">
+		<%=render 'menus/fmenu'%>
+		<div class="col-lg-8 col-12">
+					<div class="row">
+						<div class="col-lg-8 offset-lg-2 m-top-mini">
+						<img class="img-fluid m-bottom-mini" src="https://res.cloudinary.com/aseed/image/upload/v1569888153/EBEN_RADIO-1200x200px_uwyjok.jpg">
+					</div>
+					</div>
+ 					<%= form_with(model: petition, local: true) do |form| %>
   <% if petition.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(petition.errors.count, "error") %> prohibited this petition from being saved:</h2>
@@ -10,28 +20,38 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<div class="row">
+  <div class="form-group col-lg-12">
     <%= form.label :titre %>
-    <%= form.text_field :titre %>
+    <%= form.text_field :titre, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :contenu %>
-    <%= form.text_area :contenu %>
-  </div>
 
-  <div class="field">
+  <div class="form-group col-lg-6">
     <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :petition_cat_id %>
-    <%= form.collection_select :petition_cat_id, PetitionCat.all, :id, :titre,{prompt:"Sélectionnez une catégorie"} %>
+  <div class="form-group col-lg-6">
+    <%= form.label :catégorie %>
+    <%= form.collection_select :petition_cat_id, PetitionCat.all, :id, :titre,{prompt:"Sélectionnez une catégorie"} , class:"form-control"%>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+
+  <div class="form-group col-lg-12">
+    <%= form.label :contenu_de_votre_pétition %>
+    <%= form.text_area :contenu, class:"form-control", rows:"15" ,cols:"50" %>
+  </div>
+
+  <div class="form-group col-lg-12">
+    <%= form.submit "lancer la pétition", class:"btn btn-geste text-bold text-cap" %>
   </div>
 <% end %>
+ 				</div>
+		</div>
+
+<%=render 'menus/smenu'%>
+	</div>
+</div>
+<!-----techcrunch inspi----->
+<%=render 'menus/footer'%>
