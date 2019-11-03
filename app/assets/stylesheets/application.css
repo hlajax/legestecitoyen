@@ -593,6 +593,27 @@ figure.snip1253.hover img {
 		font-weight: 800;
 		text-transform: capitalize;
 	}
+
+	.sbox-img{
+		width:40%;
+		float:left;
+		background-color:transparent;
+	}
+.simg-box{
+	width:150px;
+	height:150px;
+}
+.stxt-box{
+	background-color:transaparent;
+	width:60%;
+	padding:0%;
+	float:left;
+}
+	.stxt-box h6{
+		font-weight: 800;
+		text-transform: capitalize;
+	}
+
 .sidebar-section {
   position: absolute;
   height: 100%;
@@ -764,10 +785,31 @@ figure.snip1253.hover img {
 .txt-box{
 	background-color:transaparent;
 	width:55%;
-	padding-left:10%;
+	padding-left:8%;
+	margin-top: 2.5%;
 	float:left;
 }
 	.txt-box h6{
+		font-weight: 800;
+		text-transform: capitalize;
+	}
+		.sbox-img{
+		width:40%;
+		float:left;
+		background-color:transparent;
+	}
+.simg-box{
+	width:150px;
+	height:150px;
+}
+.stxt-box{
+	background-color:transaparent;
+	width:55%;
+	padding-left:8%;
+	margin-top: 1.5%;
+	float:left;
+}
+	.stxt-box h6{
 		font-weight: 800;
 		text-transform: capitalize;
 	}

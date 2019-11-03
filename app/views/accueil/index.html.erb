@@ -244,19 +244,31 @@
 	<div class="row m-top-mini m-bottom-big">
 				
 					<div class="col-lg-12 ">
-												<div class="main-carousel">
+												<div class="row">
 													<%@sonds.each do |sondage| %>
-													<div class="carousel-cell-2">
-				<figure class="snipsond"><%=image_tag sondage.image.url%>
-  				<%=link_to sondage do%>
-					<figcaption>
-    <h3 class="title1"><%=sondage.titre%></h3>
-  </figcaption>
-					<%end%>
-</figure><%=link_to "", sondage%>
-	</div>
-		<% end %>
-				</div>
+													<div class="col-lg-6 col-12 bg-white mb-3">
+															<div class="sbox-img">
+ 																<%=image_tag sondage.image.url, class:"simg-box"%>
+ 															</div>
+  											
+																<div class="stxt-box m-top-mini">
+   																	<%=link_to sondage do%>
+    																	<h6><%=sondage.titre%></h6>
+    																	<%end%>
+    																	<span style="font-size:14px;font-weight:bold;"><span class="badge badge-success">
+    																	<%=sondage.get_likes.size%></span>
+ 																		<span class="text-cap"><%= sondage.pour%></span>
+ 																		</span>|
+																		<span  style="font-size:14px;font-weight:bold;"><span class="text-danger">
+																		</span>
+																			<span class="text-cap"><%= sondage.contre%></span>
+																			<span class="badge badge-danger"><%=sondage.get_dislikes.size%></span>
+ 																		</span>
+  																</div>
+																
+														</div>
+													<% end %>
+											</div>
 					</div>
 	</div>
 	
