@@ -15,12 +15,14 @@ class SondagesController < ApplicationController
 def upvote
   @sondage = Sondage.friendly.find(params[:id])
   @sondage.liked_by current_citoyen
+  flash[:success] = "Merci pour votre vote !"
   redirect_to @sondage
 end
 
 def downvote
   @sondage = Sondage.friendly.find(params[:id])
   @sondage.downvote_from current_citoyen
+  flash[:success] = "Merci pour votre vote !"
   redirect_to @sondage
 end
   # GET /sondages/new
