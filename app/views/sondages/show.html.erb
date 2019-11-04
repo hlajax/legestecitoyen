@@ -29,7 +29,9 @@
  					<div class="m-top"></div>
  					<% if citoyen_signed_in?%>
                              <%= link_to @sondage.pour, like_sondage_path(@sondage),class:"btn btn-success btn-block text-grand text-maj text-bold", method: :put %>
+                             <div class="alert text-success"><%= flash[:success] %></div>
 					<%= link_to @sondage.contre, dislike_sondage_path(@sondage),class:"btn btn-danger btn-block text-grand text-maj text-bold", method: :put %>
+     					<div class="alert text-success"><%= flash[:success] %></div>
       					<% else %>
       					<li class="nav-item d-xl-block d-lg-block d-md-block">
                                <p class="alert alert-danger"> <span class="text-bold small">Vous devez être connecté pour donner votre avis </span>
