@@ -1,6 +1,7 @@
 class SondagesController < ApplicationController
   before_action :set_sondage, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_administrateur!,except:[:index, :show, :upvote, :downvote]
+  before_action :authenticate_citoyen!,except:[:index, :show]
   # GET /sondages
   # GET /sondages.json
   def index

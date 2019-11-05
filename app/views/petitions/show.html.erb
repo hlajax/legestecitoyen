@@ -19,16 +19,11 @@
 						<p>Pétition initiée par <span class="text-bold text-cap"><%= @petition.citoyen.nom%></span></p>
 						<p>Catégorie : <%= @petition.petition_cat.titre%></p>
 						<p><span class="text-bold text-cap"><%=@petition.votes_for.size%></span> signature(s) pour cette pétition</p>
-						   <% if citoyen_signed_in?%>
+						   <%if @petition.citoyen.voted_for? @petition%>
+                            <h6>Vous avez signé cette pétiton !</h6>
+                            <%else%>
                              <%= link_to "Signer la pétition", like_petition_path(@petition),class:"btn btn-geste btn-block text-bold text-maj", method: :put %>
-      					<% else %>
-      					<li class="nav-item d-xl-block d-lg-block d-md-block">
-                               <p class="alert alert-danger"> <span class="text-bold small">Vous devez être connecté pour signer cette pétition </span>
-                                <%=link_to "Se connecter", new_citoyen_session_path, class:"btn btn-geste btn-sm"%>
-                                </p>
-                            </li>
-      				<%end %>
-						
+						<%end%>
 				</div>
 				<div class="col-lg-12 col-12">
 						<div class="contenu"><%= raw(@petition.contenu) %></div>

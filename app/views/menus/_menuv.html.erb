@@ -27,6 +27,10 @@
                                    <% if citoyen_signed_in?%>
                              <li class="nav-item">
                              	<a href="/citoyens/edit" class="nav-link"><i class="fas fa-user-circle"></i> Mon profil </a>
+                             	</li>
+      									<li class="nav-item d-xl-block d-lg-block d-md-block p-1">
+                                			<%=link_to "lancez une pétition", new_petition_path, class:"btn btn-geste text-cap btn-sm  mb-2"%>
+                            	
       					</li>
       					<% else %>
       					<li class="nav-item d-xl-block d-lg-block d-md-block">
