@@ -24,5 +24,8 @@ Rails.application.routes.draw do
   devise_for :administrateurs
   root 'accueil#index'
   devise_for :citoyens
+  devise_scope :citoyen do
+    get '/citoyens/sign_out' => 'devise/sessions#destroy'
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

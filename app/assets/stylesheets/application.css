@@ -96,6 +96,9 @@ a{
 .zepad{
 	padding:5%;
 }
+.zepad-s{
+	padding:3.5%;
+}
 .zepad-main{
 	padding:3%;
 }
@@ -585,8 +588,8 @@ figure.snip1253.hover img {
 }
 .txt-box{
 	background-color:transaparent;
-	width:60%;
-	padding:0%;
+	width:55%;
+	padding:1%;
 	float:left;
 }
 	.txt-box h6{
@@ -881,6 +884,9 @@ figure.snip1253.hover img {
 /*-----les paddings-----*/
 .zepad{
 	padding:5%;
+}
+.zepad-s{
+	padding:9%;
 }
 .zepad-main{
 	padding:3%;

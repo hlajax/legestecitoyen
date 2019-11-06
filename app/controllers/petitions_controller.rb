@@ -10,6 +10,7 @@ class PetitionsController < ApplicationController
   # GET /petitions/1
   # GET /petitions/1.json
   def show
+	  	  @petitions_similaires = Petition.where(petition_cat_id: @petition.petition_cat_id).limit(6).order("created_at DESC")
   end
   def upvote
   @petition = Petition.friendly.find(params[:id])

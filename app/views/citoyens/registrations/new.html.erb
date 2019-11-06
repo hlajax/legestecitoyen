@@ -16,17 +16,17 @@
   </div>
   
     <div class="form-label-group">
-    <%= f.text_field :nom,class:"form-control", placeholder:"Email address",required:true %>
+    <%= f.text_field :nom,class:"form-control", placeholder:"nom complet",required:true %>
     <%= f.label :nom %>
   </div>
   
       <div class="form-label-group">
-    <%= f.text_field :ville,class:"form-control", placeholder:"Email address",required:true%>
+    <%= f.text_field :ville,class:"form-control", placeholder:"ville",required:true%>
     <%= f.label :ville %>
   </div>
 
   <div class="form-label-group">
-    <%= f.password_field :password, autocomplete: "new-password",class:"form-control", placeholder:"Email address",required:true %>
+    <%= f.password_field :password, autocomplete: "new-password",class:"form-control", placeholder:"mot de passe",required:true %>
     <%= f.label :mot_de_passe %>
         <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> caractères minimum)</em>
@@ -34,7 +34,7 @@
   </div>
 
   <div class="form-label-group">
-    <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", placeholder:"Email address",required:true %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", placeholder:"confirmer le mot de passe",required:true %>
     <%= f.label :confirmer_mot_de_passe %>
   </div>
 

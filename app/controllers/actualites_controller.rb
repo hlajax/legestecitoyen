@@ -13,6 +13,7 @@ class ActualitesController < ApplicationController
   # GET /actualites/1
   # GET /actualites/1.json
   def show
+	  @actualites_similaires = Actualite.where(category_id: @actualite.category_id).limit(6).order("created_at DESC")
   end
   def upvote
   @actualite = Actualite.friendly.find(params[:id])

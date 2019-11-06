@@ -8,32 +8,54 @@
 						<img class="img-fluid m-bottom-mini" src="https://res.cloudinary.com/aseed/image/upload/v1569888266/EBEN_RADIO-26012016-4_OK_z7pyvc.jpg">
 					</div>
 						<div class="col-lg-12 col-12">
-						<h1 class="big-titre text-maj"><strong><%= @actualite.titre %></strong></h1>
-						<%=image_tag @actualite.image.url, class:"img-fluid"%>
-					<p>Publié par: <i><%= @actualite.administrateur.email %></i></p>
-					<p class="text-maj">Catégorie: <small><%= @actualite.category.titre%></small></p>
-					<% if citoyen_signed_in?%>
-                            <%= link_to  like_actualite_path(@actualite),class:"btn btn-success", method: :put do %>
+								<h1 class="big-titre text-maj text-bold"><strong><%= @actualite.titre %></strong></h1>
+									<%=image_tag @actualite.image.url, class:"img-fluid"%>
+									<div class="row m-top-xs">
+											<div class="col-lg-6 col-12">
+												<p class="m-top-xs"><small>Publié par: <i><%= @actualite.administrateur.email %></i></small></p>
+											</div>
+											<div class="col-lg-6 col-12 text-right">
+													  <%= link_to  like_actualite_path(@actualite),class:"btn btn-success btn-sm", method: :put do %>
                             J'aime <span class="badge badge-light"><%=@actualite.get_likes.size%></span>
                             <%end %>
-					<%= link_to dislike_actualite_path(@actualite),class:"btn btn-danger", method: :put do %>
+					<%= link_to dislike_actualite_path(@actualite),class:"btn btn-danger btn-sm", method: :put do %>
      					Je n'aime pas <span class="badge badge-light"> <%=@actualite.get_dislikes.size%></span>
      					<%end %>
-      					<% else %>
-      					<li class="nav-item d-xl-block d-lg-block d-md-block">
-                               <p class="alert alert-danger"> <span class="text-bold small">Vous devez être connecté pour donner votre avis sur cet article</span>
-                                <%=link_to "Se connecter", new_citoyen_session_path, class:"btn btn-geste btn-sm"%>
-                                </p>
-                            </li>
-      				<%end %>
-					
-					
-					
-						</div>
+											</div>
+									</div>
+									<hr>
+							</div>
 					</div>
 						<div class="row">
 				<div class="col-lg-12 col-12 contenu">
 						<%= raw(@actualite.contenu) %>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-12">
+						<h2 class="titre-section">artciles similaires</h2> 
+				</div>
+				<div class="col-lg-12 col-12 zepad-s">
+						<div class="row">
+									<% @actualites_similaires.each do |actualite| %>
+				<div class="col-lg-6 col-12 mb-3">
+					<div class="row">
+						
+							<div class="box-img">
+							<div class="img-box" style="background:url('<%=actualite.image.url%>');background-size:cover;background-position:center;">
+							</div>
+							
+					</div>
+						<div class="txt-box">
+							<h6>
+								<%=link_to actualite do%><%=actualite.titre%><%end%>
+							</h6>
+					</div>
+						 
+						</div>
+				</div>
+				<% end %>
+						</div>
 				</div>
 			</div>
 		</div>

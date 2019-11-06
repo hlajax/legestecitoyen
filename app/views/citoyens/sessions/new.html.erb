@@ -9,18 +9,18 @@
               <h2 class="mb-4 text-bold text-cap">Se connecter</h2>
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-label-group">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:"Email address",required:true %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:"Votre adresse email",required:true %>
     <%= f.label :email %>
   </div>
 
   <div class="form-label-group">
-    <%= f.password_field :password, autocomplete: "current-password",id:"inputPassword", class:"form-control", placeholder:"Password", required:true %>
+    <%= f.password_field :password, autocomplete: "current-password",id:"inputPassword", class:"form-control", placeholder:"Mot de passe", required:true %>
     <label for="inputPassword">Mot de passe</label>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="custom-control custom-checkbox mb-3">
-      <%= f.check_box :remember_me, class:"custom-control-input" %>
+    <div class="custom-control custom-checkbox mb-3" style="visibility:hidden;">
+      <%= f.check_box :remember_me, class:"custom-control-input", checked:true %>
       <%= f.label :se_souvenir_de_moi,class:"custom-control-label" %>
     </div>
   <% end %>
